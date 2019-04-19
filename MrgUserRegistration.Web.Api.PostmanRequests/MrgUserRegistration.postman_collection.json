@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "ab5dc6f5-b4ed-48d1-895c-053d918aa43a",
+		"name": "MrgUserRegistration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"FirstName\" :  \"Lucy\",\n\n    \"LastName\" : \"Chyzhova\", \n\n    \"Address\" : {\"InlineAddress\" : \"Some address\"},\n\n    \"CustomerUniqueFields\" : {\"PersonalNumber\" : \"123\", \"FavoriteFootballTeam\" : \"Juventus\" }\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/customer",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\" : \"a1a27354-aa48-4ac7-ac44-08d6c6ae2add\",\n    \n    \"FirstName\" :  \"Nick\",\n\n    \"LastName\" : \"Reshetov\", \n\n    \"Address\" : {\"InlineAddress\" : \"Some other real address\"},\n\n    \"UniqueFields\" : {\"PersonalNumber\" : \"PersonalNumber\", \"FavoriteFootballTeam\" : \"FavoriteFootballTeam\" }\n}"
+				},
+				"url": {
+					"raw": "https://localhost:44348/api/customer/a1a27354-aa48-4ac7-ac44-08d6c6ae2add",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44348",
+					"path": [
+						"api",
+						"customer",
+						"a1a27354-aa48-4ac7-ac44-08d6c6ae2add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
